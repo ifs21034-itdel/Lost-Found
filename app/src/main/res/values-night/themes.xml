@@ -3,5 +3,11 @@
     <style name="Base.Theme.LostAndFound" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="myBackground">@color/dark_primary</item>
+        <item name="myContainerBackground">@color/dark_primary</item>
+        <item name="myColorText">@color/dark_text</item>
+        <item name="myColorTextMuted">@color/dark_muted</item>
+        <item name="myColorNavBar">@color/black</item>
     </style>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="myBackground" format="reference|color" />
+    <attr name="myContainerBackground" format="reference|color" />
+    <attr name="myColorText" format="reference|color" />
+    <attr name="myColorTextMuted" format="reference|color" />
+    <attr name="myColorNavBar" format="reference|color" />
+</resources>
