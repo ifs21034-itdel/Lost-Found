@@ -15,6 +15,9 @@
         android:theme="@style/Theme.LostAndFound"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.lostfound.LostFoundFavoriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.lostfound.LostFoundManageActivity"
             android:exported="false" />
         <activity
@@ -29,7 +32,7 @@
         <activity
             android:name=".presentation.login.LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.App.SplashScreen"/>
+            android:theme="@style/Theme.App.SplashScreen" />
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true">
