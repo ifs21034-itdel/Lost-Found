@@ -12,11 +12,12 @@
         android:id="@+id/appbarLayoutLostFoundDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/appbarLostFoundDetail"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#0188A4"
+            android:background="@color/yellow"
             app:navigationIcon="@drawable/ic_arrow_back_24"
             app:navigationIconTint="@color/white"
             app:title="Detail Lost and Found"
@@ -57,18 +58,20 @@
 
                 <TextView
                     android:id="@+id/tvLostFoundDetailTitle"
+                    style="@style/Text.P3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
                     android:gravity="center_vertical"
                     android:text="Judul LostFound"
-                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cbLostFoundDetailIsFinished"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/tvLostFoundDetailDate"
+                    style="@style/Text.P5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -76,33 +79,32 @@
                     android:layout_marginEnd="16dp"
                     android:text="Tanggal dibuat: -"
                     android:textColor="#AAAAAA"
-                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvLostFoundDetailTitle" />
 
                 <TextView
                     android:id="@+id/tvLostFoundDetailDesc"
+                    style="@style/Text.P5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:text="Deskripsi lost and found"
-                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvLostFoundDetailDate" />
 
                 <TextView
                     android:id="@+id/tvLostFoundDetailStatus"
+                    style="@style/Text.P5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:text="Status"
-                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvLostFoundDetailDesc" />
@@ -122,6 +124,7 @@
 
             <TextView
                 android:id="@+id/textView7"
+                style="@style/Text.P7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tindakan"

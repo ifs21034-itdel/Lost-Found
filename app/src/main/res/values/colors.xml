@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary -->
-    <color name="blue">#0188A4</color>
+    <color name="yellow">#F7AB49</color>
     <color name="navy">#1F52A4</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="soft_grey">#A9A9A9</color>
+    <color name="blue">#0188A4</color>
 
     <!-- Secondary -->
     <color name="soft_green">#7DD69B</color>

@@ -18,7 +18,7 @@
             android:id="@+id/appbarLostFoundManage"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#0188A4"
+            android:background="@color/yellow"
             app:navigationIcon="@drawable/ic_arrow_back_24"
             app:navigationIconTint="@color/white"
             app:title="Tambah Lost and Found"
@@ -41,6 +41,7 @@
 
             <TextView
                 android:id="@+id/tvLostFoundManageLabelTitle"
+                style="@style/Text.P5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -50,6 +51,7 @@
 
             <TextView
                 android:id="@+id/tvLostFoundManageLabelDesc"
+                style="@style/Text.P5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -59,6 +61,7 @@
 
             <TextView
                 android:id="@+id/tvLostFoundManageLabelStatus"
+                style="@style/Text.P5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -97,19 +100,21 @@
 
             <Spinner
                 android:id="@+id/spLostFoundManageStatus"
-                android:entries="@array/status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
                 android:layout_marginTop="16dp"
+                android:entries="@array/status"
+                android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLostFoundManageLabelStatus" />
 
             <Button
                 android:id="@+id/btnLostFoundManageSave"
+                style="@style/Text.P5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:backgroundTint="@color/blue"
                 android:text="Simpan"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Lost and Found</string>
+    <string name="login">Login</string>
 
     <string-array name="status">
         <item>lost</item>
