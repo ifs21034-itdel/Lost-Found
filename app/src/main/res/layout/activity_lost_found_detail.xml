@@ -46,6 +46,16 @@
                 android:layout_height="match_parent"
                 android:paddingBottom="12dp">
 
+                <ImageView
+                    android:id="@+id/ivLostFoundDetailCover"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:background="#F7F8FA"
+                    android:src="@drawable/ic_image_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <CheckBox
                     android:id="@+id/cbLostFoundDetailIsFinished"
                     android:layout_width="wrap_content"
@@ -54,7 +64,8 @@
                     android:scaleY="1"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/ivLostFoundDetailCover"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/tvLostFoundDetailTitle"
@@ -67,7 +78,7 @@
                     android:text="Judul LostFound"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cbLostFoundDetailIsFinished"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/ivLostFoundDetailCover" />
 
                 <TextView
                     android:id="@+id/tvLostFoundDetailDate"

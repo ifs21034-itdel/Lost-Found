@@ -11,6 +11,7 @@ import com.ifs21034.lostandfound.data.remote.response.DelcomResponse
 import com.ifs21034.lostandfound.data.repository.LocalLostFoundRepository
 import com.ifs21034.lostandfound.data.repository.LostFoundRepository
 import com.ifs21034.lostandfound.presentation.ViewModelFactory
+import okhttp3.MultipartBody
 
 class LostFoundViewModel(
     private val lostFoundRepository: LostFoundRepository,
@@ -65,6 +66,13 @@ class LostFoundViewModel(
     }
     fun deleteLocalLostFound(lostfound: DelcomLostFoundEntity) {
         localLostFoundRepository.delete(lostfound)
+    }
+
+    fun addCoverLostFound(
+        lostFoundId: Int,
+        cover: MultipartBody.Part,
+    ): LiveData<MyResult<DelcomResponse>> {
+        return lostFoundRepository.addCoverLostFound(lostFoundId, cover).asLiveData()
     }
 
     companion object {

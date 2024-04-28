@@ -38,6 +38,41 @@
             android:paddingEnd="15dp"
             android:paddingBottom="50dp">
 
+            <ImageView
+                android:id="@+id/ivLostFoundManageCover"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_image_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/llLostFoundManageActionCover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLostFoundManageCover">
+
+                <Button
+                    android:id="@+id/btnLostFoundManageCamera"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Camera" />
+
+                <Button
+                    android:id="@+id/btnLostFoundManageGallery"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Gallery" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tvLostFoundManageLabelTitle"
@@ -47,7 +82,7 @@
                 android:layout_marginTop="24dp"
                 android:text="Judul"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/llLostFoundManageActionCover" />
 
             <TextView
                 android:id="@+id/tvLostFoundManageLabelDesc"

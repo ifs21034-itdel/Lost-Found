@@ -12,6 +12,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.ifs21034.lostandfound.R
 import com.ifs21034.lostandfound.data.local.entity.DelcomLostFoundEntity
 import com.ifs21034.lostandfound.data.model.DelcomLostFound
@@ -42,6 +43,7 @@ class LostFoundDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLostFoundDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setupView()
         setupAction()
     }
@@ -100,6 +102,18 @@ class LostFoundDetailActivity : AppCompatActivity() {
             tvLostFoundDetailTitle.text = lostFound.title
             tvLostFoundDetailDate.text = "Dibuat pada: ${lostFound.createdAt}"
             tvLostFoundDetailDesc.text = lostFound.description
+
+            if(lostFound.cover != null){
+                ivLostFoundDetailCover.visibility = View.VISIBLE
+
+                Glide.with(this@LostFoundDetailActivity)
+                    .load(lostFound.cover)
+                    .placeholder(R.drawable.ic_image_24)
+                    .into(ivLostFoundDetailCover)
+
+            }else{
+                ivLostFoundDetailCover.visibility = View.GONE
+            }
 
             val status = if(lostFound.status.equals("found", ignoreCase = true)){
                 highlightText("FOUND", Color.GREEN)
