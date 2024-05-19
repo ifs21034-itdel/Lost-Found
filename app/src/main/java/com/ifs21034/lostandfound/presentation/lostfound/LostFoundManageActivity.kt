@@ -40,14 +40,14 @@ class LostFoundManageActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupView()
-        setupAtion()
+        setupAction()
     }
 
     private fun setupView() {
         showLoading(false)
     }
 
-    private fun setupAtion() {
+    private fun setupAction() {
         val isAddLostFound = intent.getBooleanExtra(KEY_IS_ADD, true)
         if (isAddLostFound) {
             manageAddLostFound()

@@ -88,6 +88,26 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.mainMenuMyLostFound -> {
+                    observeGetLostFounds()
+                    true
+                }
+
+                R.id.mainMenuPublicLostFound -> {
+                    observeGetPublicLostFounds()
+                    true
+                }
+
+                R.id.mainMenuLost -> {
+                    observeGetLost()
+                    true
+                }
+
+                R.id.mainMenuFound -> {
+                    observeGetFound()
+                    true
+                }
+
                 R.id.mainMenuFavoriteLostFound -> {
                     openFavoriteLostFoundActivity()
                     true
@@ -112,6 +132,72 @@ class MainActivity : AppCompatActivity() {
 
     private fun observeGetLostFounds() {
         viewModel.getLostFounds().observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is MyResult.Loading -> {
+                        showLoading(true)
+                    }
+
+                    is MyResult.Success -> {
+                        showLoading(false)
+                        loadLostFoundsToLayout(result.data)
+                    }
+
+                    is MyResult.Error -> {
+                        showLoading(false)
+                        showEmptyError(true)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun observeGetPublicLostFounds() {
+        viewModel.getPublicLostFounds().observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is MyResult.Loading -> {
+                        showLoading(true)
+                    }
+
+                    is MyResult.Success -> {
+                        showLoading(false)
+                        loadLostFoundsToLayout(result.data)
+                    }
+
+                    is MyResult.Error -> {
+                        showLoading(false)
+                        showEmptyError(true)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun observeGetLost() {
+        viewModel.getLost().observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is MyResult.Loading -> {
+                        showLoading(true)
+                    }
+
+                    is MyResult.Success -> {
+                        showLoading(false)
+                        loadLostFoundsToLayout(result.data)
+                    }
+
+                    is MyResult.Error -> {
+                        showLoading(false)
+                        showEmptyError(true)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun observeGetFound() {
+        viewModel.getFound().observe(this) { result ->
             if (result != null) {
                 when (result) {
                     is MyResult.Loading -> {

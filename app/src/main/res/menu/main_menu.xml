@@ -8,6 +8,26 @@
             app:showAsAction="never" />
 
         <item
+            android:id="@+id/mainMenuMyLostFound"
+            android:title="My Lost and Found"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/mainMenuPublicLostFound"
+            android:title="Public Lost and Found"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/mainMenuLost"
+            android:title="Lost Items"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/mainMenuFound"
+            android:title="Found Items"
+            app:showAsAction="never" />
+
+        <item
             android:id="@+id/mainMenuFavoriteLostFound"
             android:title="Favorites Lost and Founds"
             app:showAsAction="never" />
